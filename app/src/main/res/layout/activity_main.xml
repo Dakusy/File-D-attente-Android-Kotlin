@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="473dp"
+        android:layout_marginLeft="473dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="473dp"
+        android:layout_marginRight="473dp"
+        android:layout_marginBottom="74dp"
+        android:text="@string/bienvenue_sur_notre_file_d_attente"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="350dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="326dp"
+        android:text="Je viens avec une ordonnance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="350dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginRight="240dp"
+        android:layout_marginBottom="326dp"
+        android:text="J'ai besoin d'un conseil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1180dp"
+        android:layout_marginLeft="1180dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1173dp"
+        android:layout_marginLeft="1173dp"
+        android:layout_marginTop="657dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Admin"
+        app:srcCompat="@android:drawable/sym_action_chat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
