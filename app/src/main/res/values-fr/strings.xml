@@ -4,4 +4,6 @@
     <string name="bienvenue_sur_notre_file_d_attente">Bienvenue sur notre File d\'Attente !</string>
     <string name="je_viens_avec_une_ordonnance">Je viens avec une ordonnance</string>
     <string name="j_ai_besoin_d_un_conseil">J\'ai besoin d\'un conseil</string>
+    <string name="choix_de_la_langue">Choix de La Langue :</string>
+    <string name="page_ordonnance">Page Ordonnance</string>
 </resources>

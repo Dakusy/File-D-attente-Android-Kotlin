@@ -1,9 +1,16 @@
 package com.example.file_attente
 
+import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
+import org.intellij.lang.annotations.Language
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,10 +32,54 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun Language(v: View?){
-        val intent = Intent(this, Ordonnance::class.java)
+    public fun radio_button_click(v: View?) {
+        if(en.isChecked){
+            setLocate("en")
+        }
+        else if(fr.isChecked){
+            val Lang = "fr"
+            val locale = Locale(Lang)
+
+            Locale.setDefault(locale)
+
+            val config = Configuration()
+
+            config.locale = locale
+            baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+            val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+            editor.putString("My_Lang", Lang)
+            editor.apply()
+        }
+        recreate()
 
     }
+    private fun setLocate(Lang: String) {
+
+        val locale = Locale(Lang)
+
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", Lang)
+        editor.apply()
+    }
+
+
+    override fun recreate() {
+        if (Build.VERSION.SDK_INT >= 11) {
+            super.recreate()
+        } else {
+            startActivity(intent)
+            finish()
+        }
+    }
+
 
 
 }

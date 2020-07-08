@@ -6,6 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="505dp"
+        android:layout_height="195dp"
+        android:layout_marginStart="388dp"
+        android:layout_marginLeft="388dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="387dp"
+        android:layout_marginRight="387dp"
+        android:layout_marginBottom="84dp"
+        android:background="#dbeceb"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choix_de_la_langue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
+            android:text="English" />
+
+        <RadioButton
+            android:id="@+id/fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
+            android:text="French" />
+
+    </RadioGroup>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -51,26 +94,12 @@
         android:layout_marginEnd="240dp"
         android:layout_marginRight="240dp"
         android:layout_marginBottom="326dp"
+        android:onClick="lang"
         android:text="@string/j_ai_besoin_d_un_conseil"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button1" />
-
-    <ListView
-        android:id="@+id/Language"
-        android:layout_width="811dp"
-        android:layout_height="156dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="249dp"
-        android:layout_marginRight="249dp"
-        android:layout_marginBottom="159dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@
         android:layout_marginEnd="473dp"
         android:layout_marginRight="473dp"
         android:layout_marginBottom="74dp"
-        android:text="Page Ordonnance"
+        android:text="@string/page_ordonnance"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"

@@ -4,4 +4,6 @@
     <string name="bienvenue_sur_notre_file_d_attente">Welcome on your Waiting Queue</string>
     <string name="j_ai_besoin_d_un_conseil">I need some advice.</string>
     <string name="je_viens_avec_une_ordonnance">I come with a prescription</string>
+    <string name="choix_de_la_langue">"Choice your Language : "</string>
+    <string name="page_ordonnance">Page Of Prescription</string>
 </resources>
