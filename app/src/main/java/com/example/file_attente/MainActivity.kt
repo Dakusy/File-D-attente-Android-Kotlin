@@ -28,18 +28,19 @@ class MainActivity : AppCompatActivity() {
     fun ordonnance(v: View?) {
         //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
         val intent = Intent(this, Ordonnance::class.java)
-        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
+        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
         startActivity(intent)
     }
 
     fun conseil(v: View?) {
         //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
         val intent = Intent(this, Conseil::class.java)
-        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
+        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Conseil
         startActivity(intent)
     }
-
+    //Permet de changer la langue avec des radio buttons.
     public fun radio_button_click(v: View?) {
+        //Si check changement de langue
         if(en.isChecked){
             setLocate("en")
         }

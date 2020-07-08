@@ -44,20 +44,15 @@
 
     <TextView
         android:id="@+id/restart2"
-        android:layout_width="142dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="928dp"
-        android:layout_marginLeft="928dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="731dp"
+        android:layout_width="147dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:text="@string/red_marrer"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/restart_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toStartOf="@+id/restart_button2"
+        tools:layout_editor_absoluteY="21dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -85,8 +80,8 @@
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:layout_marginBottom="723dp"
         android:clickable="true"
         android:onClick="Back"
