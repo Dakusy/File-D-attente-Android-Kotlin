@@ -38,14 +38,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="radio_button_click"
-            android:text="English" />
+            android:text="@string/english" />
 
         <RadioButton
             android:id="@+id/fr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="radio_button_click"
-            android:text="French" />
+            android:text="@string/french" />
+
+        <RadioButton
+            android:id="@+id/es"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
+            android:text="@string/spanish" />
 
     </RadioGroup>
 
@@ -55,16 +62,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="473dp"
         android:layout_marginLeft="473dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="473dp"
         android:layout_marginRight="473dp"
-        android:layout_marginBottom="74dp"
         android:text="@string/bienvenue_sur_notre_file_d_attente"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,18 +78,21 @@
         android:id="@+id/button1"
         android:layout_width="350dp"
         android:layout_height="220dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginLeft="240dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="326dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginRight="106dp"
+        android:layout_marginBottom="332dp"
         android:onClick="Go"
         android:text="@string/je_viens_avec_une_ordonnance"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.75" />
 
     <Button
         android:id="@+id/button2"
@@ -91,15 +100,18 @@
         android:layout_height="220dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginTop="89dp"
         android:layout_marginEnd="240dp"
         android:layout_marginRight="240dp"
         android:layout_marginBottom="326dp"
-        android:onClick="lang"
         android:text="@string/j_ai_besoin_d_un_conseil"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button1" />
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.75" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

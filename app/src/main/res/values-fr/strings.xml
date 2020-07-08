@@ -6,4 +6,8 @@
     <string name="j_ai_besoin_d_un_conseil">J\'ai besoin d\'un conseil</string>
     <string name="choix_de_la_langue">Choix de La Langue :</string>
     <string name="page_ordonnance">Page Ordonnance</string>
+    <string name="english">Anglais</string>
+    <string name="french">Français</string>
+    <string name="spanish">Espagnol</string>
+    <string name="red_marrer">Redémarrer :</string>
 </resources>

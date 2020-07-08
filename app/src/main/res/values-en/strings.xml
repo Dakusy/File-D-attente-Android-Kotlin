@@ -6,4 +6,8 @@
     <string name="je_viens_avec_une_ordonnance">I come with a prescription</string>
     <string name="choix_de_la_langue">"Choice your Language : "</string>
     <string name="page_ordonnance">Page Of Prescription</string>
+    <string name="english">English</string>
+    <string name="french">French</string>
+    <string name="spanish">Spanish</string>
+    <string name="red_marrer">Restart :</string>
 </resources>

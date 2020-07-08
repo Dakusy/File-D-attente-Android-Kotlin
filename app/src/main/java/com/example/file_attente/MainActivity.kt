@@ -37,19 +37,11 @@ class MainActivity : AppCompatActivity() {
             setLocate("en")
         }
         else if(fr.isChecked){
-            val Lang = "fr"
-            val locale = Locale(Lang)
+            setLocate("fr")
+        }
 
-            Locale.setDefault(locale)
-
-            val config = Configuration()
-
-            config.locale = locale
-            baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-
-            val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
-            editor.putString("My_Lang", Lang)
-            editor.apply()
+        else if(es.isChecked){
+            setLocate("es")
         }
         recreate()
 

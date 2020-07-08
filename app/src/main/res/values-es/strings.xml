@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cola de espera</string>
+    <string name="bienvenue_sur_notre_file_d_attente">Bienvenido a su cola de espera</string>
+    <string name="j_ai_besoin_d_un_conseil">Necesito un consejo.</string>
+    <string name="je_viens_avec_une_ordonnance">Vengo con una receta</string>
+    <string name="choix_de_la_langue">"Elige tu idioma: "</string>
+    <string name="page_ordonnance">Página de prescripción</string>
+    <string name="english">Inglés</string>
+    <string name="french">Francés</string>
+    <string name="spanish">Español</string>
+    <string name="red_marrer">Reinicie :</string>
+</resources>

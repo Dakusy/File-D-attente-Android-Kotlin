@@ -5,4 +5,8 @@
     <string name="je_viens_avec_une_ordonnance">Je viens avec une ordonnance</string>
     <string name="choix_de_la_langue">Choix de La Langue :</string>
     <string name="page_ordonnance">Page Ordonnance</string>
+    <string name="english">English</string>
+    <string name="french">French</string>
+    <string name="spanish">Spanish</string>
+    <string name="red_marrer">Redémarrer :</string>
 </resources>
