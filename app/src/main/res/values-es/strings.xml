@@ -10,4 +10,7 @@
     <string name="french">Francés</string>
     <string name="spanish">Español</string>
     <string name="red_marrer">Reinicie :</string>
+    <string name="page_conseil">Página de consejos</string>
+    <string name="je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom">No quiero que se utilice mi imagen. Prefiero introducir un apodo o mi nombre.</string>
+    <string name="j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente">Acepto que mi imagen se use temporalmente y se asocie a mi número en la cola.</string>
 </resources>

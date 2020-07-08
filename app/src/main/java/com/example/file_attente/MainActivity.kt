@@ -25,9 +25,16 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun Go(v: View?) {
+    fun ordonnance(v: View?) {
         //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
         val intent = Intent(this, Ordonnance::class.java)
+        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
+        startActivity(intent)
+    }
+
+    fun conseil(v: View?) {
+        //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
+        val intent = Intent(this, Conseil::class.java)
         //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
         startActivity(intent)
     }

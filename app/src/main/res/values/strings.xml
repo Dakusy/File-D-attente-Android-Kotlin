@@ -9,4 +9,7 @@
     <string name="french">French</string>
     <string name="spanish">Spanish</string>
     <string name="red_marrer">Redémarrer :</string>
+    <string name="j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente">J\'accepte que mon image soit utilisé temporairement et associé à mon numéro dans la file d\'attente</string>
+    <string name="je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom">Je ne souhaite pas que mon image soit utilisé. Je préfère saisir un pseudo ou mon nom.</string>
+    <string name="page_conseil">Page Conseil</string>
 </resources>
