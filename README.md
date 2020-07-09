@@ -13,7 +13,7 @@ Gérer efficacement une file d'attente avec TICKET ou en récupérant l'IMAGE de
 ## Contributing
 Ouvrir une issue si vous êtes intéressé pour des suggestions ou m'aider.
 
-## Usage
+## Roadmap
 
 Roadmap : https://trello.com/b/od9YxUft/file-dattente-android-kotlin
 
