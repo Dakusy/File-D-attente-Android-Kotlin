@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
 
     <RadioGroup
         android:id="@+id/radio_group"
-        android:layout_width="240dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="392dp"
-        android:layout_marginLeft="392dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="392dp"
-        android:layout_marginRight="392dp"
-        android:layout_marginBottom="198dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
         android:background="#dbeceb"
-        android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
+        android:padding="15dp">
 
         <TextView
             android:id="@+id/title"
@@ -56,60 +45,40 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="363dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="473dp"
-        android:layout_marginLeft="473dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="473dp"
-        android:layout_marginRight="473dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/button1"
+        android:layout_marginBottom="50dp"
         android:text="@string/bienvenue_sur_notre_file_d_attente"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="350dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:layout_marginBottom="38dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/radio_group"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="10dp"
         android:onClick="conseil"
         android:text="@string/j_ai_besoin_d_un_conseil"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/radio_group"
-        app:layout_constraintEnd_toStartOf="@+id/button1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="350dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginRight="130dp"
-        android:layout_marginBottom="58dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/radio_group"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="200dp"
         android:onClick="ordonnance"
         android:text="@string/je_viens_avec_une_ordonnance"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/radio_group"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="30sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
