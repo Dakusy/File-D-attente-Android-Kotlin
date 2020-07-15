@@ -1,98 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Ordonnance">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="600dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="picture_ordonnance"
+        android:text="@string/j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="600dp"
+        android:layout_height="230dp"
+        android:layout_below="@id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="nom_ordonnance"
+        android:text="@string/je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/restart3"
-        android:layout_width="147dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:id="@+id/restart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/restart_button"
         android:text="@string/red_marrer"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/restart_button"
-        tools:layout_editor_absoluteY="21dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="24sp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/restart_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="723dp"
+        android:layout_marginLeft="0dp"
         android:clickable="true"
-        android:onClick="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/restart"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/btn_dialog" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="600dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="340dp"
-        android:layout_marginLeft="340dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="340dp"
-        android:layout_marginRight="340dp"
-        android:layout_marginBottom="62dp"
-        android:onClick="nom_ordonnance"
-        android:text="@string/je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="600dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="340dp"
-        android:layout_marginLeft="340dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="340dp"
-        android:layout_marginRight="340dp"
-        android:layout_marginBottom="26dp"
-        android:onClick="picture_ordonnance"
-        android:text="@string/j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:layout_alignParentRight="true"
+        android:onClick="Back" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="473dp"
-        android:layout_marginLeft="473dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="473dp"
-        android:layout_marginRight="473dp"
-        android:layout_marginBottom="74dp"
         android:text="@string/page_ordonnance"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/button4"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="30sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
