@@ -6,9 +6,13 @@
         <device id="Nexus 9" />
         <device id="Nexus 7 2013" />
         <device id="Nexus 7" />
+        <device id="pixel_3_xl" />
+        <device id="pixel_2" />
+        <device id="pixel_3a" />
+        <device id="Nexus 6" />
+        <device id="pixel_3a_xl" />
         <device id="5.1in WVGA" />
         <device id="pixel_c" />
-        <device id="Nexus 10" />
         <locale>fr</locale>
         <target>android-30</target>
       </config>
@@ -38,10 +42,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="valueResourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -159,18 +163,18 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="883" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594283230063">
+    <state x="883" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594799847705">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="883" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594283230063" />
-    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog" timestamp="1594214158801">
+    <state x="883" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594799847705" />
+    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog" timestamp="1594371936068">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1594214158801" />
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1594194283044">
+    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1594371936068" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1594799864633">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1594194283044" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1594799864633" />
     <state x="627" y="225" key="AndroidCreateXmlResourceDialog" timestamp="1594281943822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -207,10 +211,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1594278598492" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1594278301417">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1594797848046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594278301417" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594797848046" />
     <state x="510" y="54" key="refactoring.ChangeSignatureDialog" timestamp="1594122428923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
