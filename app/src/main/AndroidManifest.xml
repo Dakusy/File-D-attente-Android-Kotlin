@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".Nom_Ordonnance"></activity>
+        <activity android:name=".Show_Conseil_Nom"></activity>
+        <activity android:name=".Nom_Ordonnance" />
         <activity android:name=".Nom_Conseil" />
         <activity android:name=".Picture_Ordonnance" />
         <activity android:name=".Conseil" />

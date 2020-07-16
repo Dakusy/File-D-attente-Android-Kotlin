@@ -2,4 +2,52 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/editTextTextPersonName"
+        android:layout_marginBottom="100dp"
+        android:text="@string/inscrivez_votre_nom_qui_sera_associ_votre_num_ro_de_file_d_attente"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:hint="Nom"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/restart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/restart_button"
+        android:text="@string/red_marrer"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/restart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:onClick="Back" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTextPersonName"
+        android:layout_centerInParent="true"
+        android:onClick="Show"
+        android:text="@string/valider" />
+
+
 </RelativeLayout>
