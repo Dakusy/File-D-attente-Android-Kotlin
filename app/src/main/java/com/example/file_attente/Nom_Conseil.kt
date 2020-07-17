@@ -16,6 +16,7 @@ import androidx.core.app.NotificationCompat
 class Nom_Conseil : AppCompatActivity() {
 
 
+     var Number: Int = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,14 +24,13 @@ class Nom_Conseil : AppCompatActivity() {
         setContentView(R.layout.activity_nom__conseil)
 
         val Name = findViewById<EditText>(R.id.editTextTextPersonName)
-        var Number = 0
         val submitBtn = findViewById<Button>(R.id.submit)
 
 
         submitBtn.setOnClickListener {
             //get text from edittexts
             val name = Name.text.toString()
-            Number = Number + 1
+            Number += 1
             //intent to start activity
             val intent = Intent(this@Nom_Conseil, Show_Conseil_Nom::class.java)
             intent.putExtra("Name", name)

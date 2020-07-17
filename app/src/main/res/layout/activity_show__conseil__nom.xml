@@ -6,9 +6,29 @@
         android:id="@+id/Show_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="30sp"
         android:layout_centerInParent="true"
-        />
+        android:text=""
+        android:textColor="#2196F3"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Btn_Retour"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/Show_Number"
+        android:layout_centerInParent="true"
+        android:onClick="main"
+        android:text="Fin" />
+
+    <TextView
+        android:id="@+id/Show_Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Show_Name"
+        android:layout_centerHorizontal="true"
+        android:textColor="#2196F3"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

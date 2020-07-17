@@ -1,7 +1,9 @@
 package com.example.file_attente
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 
 class Show_Conseil_Nom : AppCompatActivity() {
@@ -11,14 +13,26 @@ class Show_Conseil_Nom : AppCompatActivity() {
 
         val intent = intent
         val name = intent.getStringExtra("Name")
-        val Number = intent.getIntArrayExtra("Number")
+        val Number = intent.getIntExtra("Number", 0)
 
         //textview
-        val resultTv = findViewById<TextView>(R.id.Show_Name)
+        val resultName = findViewById<TextView>(R.id.Show_Name)
         //setText
-        resultTv.text = "Name: " + name + "Number : " + Number
+        resultName.text = "Name: " + name
 
+        val resultNumber = findViewById<TextView>(R.id.Show_Number)
+        //setText
+        resultNumber.text ="Number: " + Number
     }
+
+    fun main(v: View?) {
+        //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
+        val intent = Intent(this, MainActivity::class.java)
+        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
+        startActivity(intent)
+    }
+
+
 
 
 
