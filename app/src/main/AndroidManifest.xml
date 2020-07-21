@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.file_attente">
+    <!-- Adding Camera, Write External Storage Permission -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -10,12 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".Show_Picture_Conseil"></activity>
+        <activity android:name=".Picture_Conseil" />
         <activity android:name=".Show_Ordo_Nom" />
         <activity android:name=".Show_Conseil_Nom" />
         <activity android:name=".Nom_Ordonnance" />
         <activity android:name=".Nom_Conseil" />
-        <activity android:name=".Picture_Ordonnance" />
         <activity android:name=".Conseil" />
         <activity android:name=".Ordonnance" />
         <activity android:name=".MainActivity">

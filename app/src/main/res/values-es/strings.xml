@@ -14,4 +14,8 @@
     <string name="je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom">No quiero que se utilice mi imagen. Prefiero introducir un apodo o mi nombre.</string>
     <string name="j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente">Acepto que mi imagen se use temporalmente y se asocie a mi número en la cola.</string>
     <string name="inscrivez_votre_nom_qui_sera_associ_votre_num_ro_de_file_d_attente">Introduce tu nombre que se asociará con tu número de cola.</string>
+    <string name="fin">Termine</string>
+    <string name="valider">Validar</string>
+    <string name="nom">Name</string>
+    <string name="capture_image">Capturar la imagen</string>
 </resources>

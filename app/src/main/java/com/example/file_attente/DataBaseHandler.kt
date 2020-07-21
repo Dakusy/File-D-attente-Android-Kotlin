@@ -9,7 +9,7 @@ import android.widget.Toast
 
 
 /**
- * Created by VickY on 2017-11-28.
+ * Created by JessyC on 2020-07-20.
  */
 
 val DATABASE_NAME ="MyDB"

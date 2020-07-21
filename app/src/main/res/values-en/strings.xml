@@ -14,4 +14,8 @@
     <string name="je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom">I do not wish my image to be used. I prefer to enter a nickname or my name.</string>
     <string name="j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente">I agree to have my image used temporarily and associated with my number in the queue.</string>
     <string name="inscrivez_votre_nom_qui_sera_associ_votre_num_ro_de_file_d_attente">Enter your name that will be associated with your queue number.</string>
+    <string name="fin">Finish</string>
+    <string name="valider">Submit</string>
+    <string name="nom">Name</string>
+    <string name="capture_image">Capture Image</string>
 </resources>

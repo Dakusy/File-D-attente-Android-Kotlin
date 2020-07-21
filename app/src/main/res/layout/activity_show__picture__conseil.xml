@@ -2,16 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/Show_Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text=""
-        android:textColor="#2196F3"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/image_view"
+        android:src="@drawable/ic_baseline_image_24"
+        android:layout_centerHorizontal="true"
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
 
     <Button
         android:id="@+id/Btn_Retour"
@@ -19,14 +15,14 @@
         android:layout_height="100dp"
         android:layout_below="@id/Show_Number"
         android:layout_centerInParent="true"
-        android:onClick="main"
         android:text="@string/fin" />
+
 
     <TextView
         android:id="@+id/Show_Number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Show_Name"
+        android:layout_below="@id/image_view"
         android:layout_centerHorizontal="true"
         android:textColor="#2196F3"
         android:textSize="36sp"

@@ -20,14 +20,20 @@ class Nom_Conseil : AppCompatActivity() {
 
 
         submit.setOnClickListener {
-            //get text from edittexts
-            val name = Name.text.toString()
-            Number += 1
-            //intent to start activity
-            val intent = Intent(this@Nom_Conseil, Show_Conseil_Nom::class.java)
-            intent.putExtra("Name", name)
-            intent.putExtra("Number", Number)
-            startActivity(intent)
+            if (Name.text.toString().isNotEmpty()) {
+                var user = User(Name.text.toString())
+                db.insertData(user)
+                val name = Name.text.toString()
+                Number += 1
+                //intent to start activity
+                val intent = Intent(this@Nom_Conseil, Show_Conseil_Nom::class.java)
+                intent.putExtra("Name", name)
+                intent.putExtra("Number", Number)
+                startActivity(intent)
+            } else {
+                Toast.makeText(context,"Please Fill All Data's",Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 
