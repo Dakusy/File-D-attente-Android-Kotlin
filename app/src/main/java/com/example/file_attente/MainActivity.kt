@@ -7,11 +7,11 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.mongodb.DB
 import com.mongodb.MongoClient
 import com.mongodb.MongoClientURI
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-
-        val mongoClient = MongoClient(MongoClientURI("mongodb://localhost:27017"))
     }
 
 

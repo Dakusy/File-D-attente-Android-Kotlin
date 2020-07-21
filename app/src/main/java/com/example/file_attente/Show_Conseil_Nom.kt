@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_nom__conseil.*
+import kotlinx.android.synthetic.main.activity_show__conseil__nom.*
 
 class Show_Conseil_Nom : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,17 +25,12 @@ class Show_Conseil_Nom : AppCompatActivity() {
         val resultNumber = findViewById<TextView>(R.id.Show_Number)
         //setText
         resultNumber.text ="Number: " + Number
+
+        Btn_Retour.setOnClickListener {
+            val intent = Intent(this@Show_Conseil_Nom, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
-
-    fun main(v: View?) {
-        //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
-        val intent = Intent(this, MainActivity::class.java)
-        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
-        startActivity(intent)
-    }
-
-
-
 
 
 }
