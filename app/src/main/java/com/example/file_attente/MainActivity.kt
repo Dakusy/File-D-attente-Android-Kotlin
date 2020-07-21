@@ -1,6 +1,5 @@
 package com.example.file_attente
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
@@ -8,9 +7,11 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.mongodb.MongoClient
+import com.mongodb.MongoClientURI
 import kotlinx.android.synthetic.main.activity_main.*
-import org.intellij.lang.annotations.Language
 import java.util.*
+
 
 
 class MainActivity : AppCompatActivity() {

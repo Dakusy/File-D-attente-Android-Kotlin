@@ -13,4 +13,6 @@
     <string name="je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom">Je ne souhaite pas que mon image soit utilisé. Je préfère saisir un pseudo ou mon nom.</string>
     <string name="page_conseil">Page Conseil</string>
     <string name="inscrivez_votre_nom_qui_sera_associ_votre_num_ro_de_file_d_attente">Inscrivez votre nom qui sera associé à votre numéro de file d\'attente</string>
+    <string name="valider">Valider</string>
+    <string name="fin">Fin</string>
 </resources>
