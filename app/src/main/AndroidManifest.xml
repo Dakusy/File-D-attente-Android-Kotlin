@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".Show_Picture_Conseil"></activity>
+        <activity android:name=".Login"></activity>
+        <activity android:name=".Guest" />
+        <activity android:name=".Show_Picture_Conseil" />
         <activity android:name=".Picture_Conseil" />
         <activity android:name=".Show_Ordo_Nom" />
         <activity android:name=".Show_Conseil_Nom" />

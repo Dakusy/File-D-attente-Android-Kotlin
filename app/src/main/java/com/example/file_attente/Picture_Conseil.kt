@@ -35,7 +35,6 @@ class Picture_Conseil : AppCompatActivity() {
                     requestPermissions(permission, PERMISSION_CODE)
                 }
                 else{
-                    //permission already granted
                     openCamera()
                 }
             }
