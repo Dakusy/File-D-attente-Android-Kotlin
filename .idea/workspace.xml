@@ -4,15 +4,6 @@
     <shared>
       <config>
         <device id="Nexus 9" />
-        <device id="Nexus 7 2013" />
-        <device id="Nexus 7" />
-        <device id="pixel_3_xl" />
-        <device id="pixel_2" />
-        <device id="pixel_3a" />
-        <device id="Nexus 6" />
-        <device id="pixel_3a_xl" />
-        <device id="5.1in WVGA" />
-        <device id="pixel_c" />
         <locale>fr</locale>
         <target>android-30</target>
       </config>
@@ -25,7 +16,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="0123456789ABCDEF" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_9_API_27" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -69,7 +60,7 @@
     <property name="SHOW_ALL_PROCESSES" value="true" />
     <property name="android.recentlyUsedThemes" value="AppTheme" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SqliteExample-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -178,6 +169,19 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="515" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595249084565">
       <screen x="0" y="0" width="1536" height="824" />
@@ -247,10 +251,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594115935435" />
-    <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1595248519075">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="125" y="126" width="1670" height="788" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1595424939846">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1595248519075" />
+    <state x="125" y="126" width="1670" height="788" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595424939846" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595315491921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
