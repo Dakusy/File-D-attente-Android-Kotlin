@@ -36,6 +36,10 @@ class Picture_Conseil : AppCompatActivity() {
                 }
                 else{
                     openCamera()
+                    val intent = Intent(this, Show_Picture_Conseil::class.java)
+                    Number += 1
+                    intent.putExtra("Number", Number)
+                    startActivity(intent)
                 }
             }
             else{
@@ -54,6 +58,7 @@ class Picture_Conseil : AppCompatActivity() {
         val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, image_uri)
         startActivityForResult(cameraIntent, IMAGE_CAPTURE_CODE)
+
     }
 
 
