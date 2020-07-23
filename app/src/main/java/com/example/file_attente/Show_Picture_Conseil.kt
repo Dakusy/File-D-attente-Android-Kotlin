@@ -21,15 +21,5 @@ class Show_Picture_Conseil : AppCompatActivity() {
             val intent = Intent(this@Show_Picture_Conseil, MainActivity::class.java)
             startActivity(intent)
         }
-<<<<<<< Updated upstream
     }
-
-
-
-=======
-
     }
-
-
->>>>>>> Stashed changes
-}

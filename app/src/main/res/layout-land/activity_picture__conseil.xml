@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_view"
+        android:src="@drawable/ic_baseline_image_24"
+        android:layout_centerHorizontal="true"
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
+
+    <!--Button to open camera-->
+    <Button
+        android:id="@+id/capture_btn"
+        android:text="@string/capture_image"
+        android:layout_below="@id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/capture_btn"
+        android:layout_centerHorizontal="true"
+        android:onClick="show_picture_conseil"
+        android:text="@string/valider" />
+</RelativeLayout>
