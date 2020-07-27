@@ -18,11 +18,11 @@ class Nom_Ordonnance : AppCompatActivity() {
         setContentView(R.layout.activity_nom__ordonnance)
 
 
-        submit.setOnClickListener {
-            if (Name.text.toString().isNotEmpty()) {
-                var user = User(Name.text.toString())
+        submit_Ordo.setOnClickListener {
+            if (Name_Ordo.text.toString().isNotEmpty()) {
+                var user = User(Name_Ordo.text.toString())
                 db.insertData(user)
-                val name = Name.text.toString()
+                val name = Name_Ordo.text.toString()
                 Number += 1
                 //intent to start activity
                 val intent = Intent(this@Nom_Ordonnance, Show_Conseil_Nom::class.java)

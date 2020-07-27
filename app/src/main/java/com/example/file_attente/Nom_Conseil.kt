@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_nom__conseil.*
 
@@ -19,11 +18,11 @@ class Nom_Conseil : AppCompatActivity() {
 
 
 
-        submit.setOnClickListener {
-            if (Name.text.toString().isNotEmpty()) {
-                var user = User(Name.text.toString())
+        submit_Ordo.setOnClickListener {
+            if (Name_Ordo.text.toString().isNotEmpty()) {
+                var user = User(Name_Ordo.text.toString())
                 db.insertData(user)
-                val name = Name.text.toString()
+                val name = Name_Ordo.text.toString()
                 Number += 1
                 //intent to start activity
                 val intent = Intent(this@Nom_Conseil, Show_Conseil_Nom::class.java)
