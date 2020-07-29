@@ -26,9 +26,10 @@
         />
 
     <EditText
+        android:id="@+id/username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:hint="@string/user_name" />
     <TextView
@@ -38,23 +39,24 @@
         android:text="@string/password"
         android:textColor="@color/colorAccent"
         />
+
     <EditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:paddingHorizontal="12dp"
-        android:paddingVertical="20dp"
-        android:layout_marginHorizontal="30dp"
-        />
+        android:paddingVertical="20dp" />
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="20dp"
-        />
+        android:text="@string/login" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
