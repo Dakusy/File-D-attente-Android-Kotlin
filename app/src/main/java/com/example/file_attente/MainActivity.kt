@@ -1,14 +1,19 @@
 package com.example.file_attente
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
-import android.os.Build
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.support.v4.os.IResultReceiver
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.file_attente.languages.MyContextWrapper
+import com.example.file_attente.languages.MyPreference
+import com.example.file_attente.languages.Settings
 import com.mazenrashed.printooth.Printooth
+import com.mazenrashed.printooth.data.printable.ImagePrintable
 import com.mazenrashed.printooth.data.printable.Printable
 import com.mazenrashed.printooth.data.printable.RawPrintable
 import com.mazenrashed.printooth.data.printable.TextPrintable
@@ -16,23 +21,29 @@ import com.mazenrashed.printooth.data.printer.DefaultPrinter
 import com.mazenrashed.printooth.ui.ScanningActivity
 import com.mazenrashed.printooth.utilities.Printing
 import com.mazenrashed.printooth.utilities.PrintingCallback
-import com.mongodb.MongoClient
-import com.mongodb.MongoClientURI
+import com.squareup.picasso.Picasso
+import com.squareup.picasso.Target
 import kotlinx.android.synthetic.main.activity_main.*
-import java.net.URL
-import java.util.*
+import java.lang.Exception
 import kotlin.collections.ArrayList
 
 
 class MainActivity : AppCompatActivity(), PrintingCallback {
 
+    lateinit var myPreference: MyPreference
     internal var printing: Printing? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
         initView()
+
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        myPreference = MyPreference(newBase!!)
+        val lang = myPreference.getLoginCount()
+        super.attachBaseContext(MyContextWrapper.wrap(newBase,lang))
     }
 
     fun ordonnance(v: View?) {
@@ -42,12 +53,19 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
         startActivity(intent)
     }
 
+    fun lang(v: View?) {
+        //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
+        val intent = Intent(this, Settings::class.java)
+        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
+        startActivity(intent)
+    }
+
 
     private fun initView() {
-        if (printing != null) {
-            printing!!.printingCallback = this
+        if (this.printing != null) {
+            this.printing!!.printingCallback = this
 
-            button.setOnClickListener {
+            btn_PairUnPair.setOnClickListener {
                 if (Printooth.hasPairedPrinter()) {
                     Printooth.removeCurrentPrinter()
                 } else {
@@ -87,9 +105,9 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
 
     private fun changePairAndUnpair() {
         if (Printooth.hasPairedPrinter()) {
-            button.text = "Unpair  ${Printooth.getPairedPrinter()?.name}"
+            btn_PairUnPair.text = "Unpair  ${Printooth.getPairedPrinter()!!.name}"
         } else {
-            button.text = "Pair with printer"
+            btn_PairUnPair.text = "Pair with printer"
         }
     }
 
@@ -100,64 +118,26 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
         startActivity(intent)
     }
 
-    //Permet de changer la langue avec des radio buttons.
-    public fun radio_button_click(v: View?) {
-        //Si check changement de langue
-        if (en.isChecked) {
-            setLocate("en")
-        } else if (fr.isChecked) {
-            setLocate("fr")
-        } else if (es.isChecked) {
-            setLocate("es")
-        }
-        recreate()
 
-    }
-
-    private fun setLocate(Lang: String) {
-
-        val locale = Locale(Lang)
-
-        Locale.setDefault(locale)
-
-        val config = Configuration()
-
-        config.locale = locale
-        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-
-        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
-        editor.putString("My_Lang", Lang)
-        editor.apply()
-    }
-
-
-    override fun recreate() {
-        if (Build.VERSION.SDK_INT >= 11) {
-            super.recreate()
-        } else {
-            startActivity(intent)
-            finish()
-        }
-    }
 
     override fun connectingWithPrinter() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Connecting to printer", Toast.LENGTH_SHORT).show()
     }
 
     override fun connectionFailed(error: String) {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Failed: $error", Toast.LENGTH_SHORT).show()
     }
 
     override fun onError(error: String) {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Error : $error", Toast.LENGTH_SHORT).show()
     }
 
     override fun onMessage(message: String) {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Message : $message", Toast.LENGTH_SHORT).show()
     }
 
     override fun printingOrderSentSuccessfully() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Order sent to printer", Toast.LENGTH_SHORT).show()
     }
 
 
@@ -189,7 +169,45 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
     }
 
     private fun printImage() {
+        val printables = ArrayList<Printable>()
 
+            //load Bitmap from internet
+        Picasso.get().load("https://image.flaticon.com/icons/png/512/38/38002.png")
+            .into(object : Target {
+                override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
+
+                }
+
+                override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
+                    TODO("Not yet implemented")
+                }
+
+                override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
+                    printables.add(ImagePrintable.Builder(bitmap!!).build())
+                        printing!!.print(printables)
+                }
+
+            })
+
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode ==  ScanningActivity.SCANNING_FOR_PRINTER && resultCode == Activity.RESULT_OK){
+            initPrinting();
+            changePairAndUnpair()
+        }
+    }
+
+    private fun initPrinting() {
+        if(Printooth.hasPairedPrinter()){
+            printing =  Printooth.printer()
+        }
+        if(printing != null){
+            printing!!.printingCallback = this
+
+        }
 
     }
 }

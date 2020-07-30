@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
-
-
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
-        android:background="#dbeceb"
-        android:padding="15dp">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/choix_de_la_langue"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/en"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="radio_button_click"
-            android:text="@string/english" />
-
-        <RadioButton
-            android:id="@+id/fr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="radio_button_click"
-            android:text="@string/french" />
-
-        <RadioButton
-            android:id="@+id/es"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="radio_button_click"
-            android:text="@string/spanish" />
-
-    </RadioGroup>
 
 
     <TextView
@@ -60,10 +20,10 @@
         android:id="@+id/button2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_above="@id/radio_group"
+        android:layout_above="@id/btn_PairUnPair"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="200dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="5dp"
         android:onClick="conseil"
         android:text="@string/j_ai_besoin_d_un_conseil"
         android:textColor="@color/colorAccent"
@@ -73,22 +33,49 @@
         android:id="@+id/button1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_above="@id/radio_group"
+        android:layout_above="@id/btn_PairUnPair"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="100dp"
         android:onClick="ordonnance"
         android:text="@string/je_viens_avec_une_ordonnance"
         android:textColor="@color/colorAccent"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_PairUnPair"
+        android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/radio_group"
         android:layout_centerInParent="true"
-        android:onClick="login"
-        android:text="Button" />
+        android:text="PAIR" />
+
+    <Button
+        android:id="@+id/images"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/btn_PairUnPair"
+        android:layout_height="wrap_content"
+        android:text="IMAGES" />
+
+    <Button
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/images"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/nombre"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:onClick="lang"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
 
 </RelativeLayout>
