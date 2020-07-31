@@ -42,7 +42,7 @@
         android:textColor="@color/colorAccent"
         android:textSize="30sp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_PairUnPair"
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
         android:layout_centerInParent="true"
         android:text="PAIR" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/images"
         android:layout_width="wrap_content"
         android:layout_centerInParent="true"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:text="IMAGES" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_below="@id/images"

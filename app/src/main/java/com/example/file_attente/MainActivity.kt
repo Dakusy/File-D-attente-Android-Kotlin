@@ -28,6 +28,7 @@ import java.lang.Exception
 import kotlin.collections.ArrayList
 
 
+
 class MainActivity : AppCompatActivity(), PrintingCallback {
 
     lateinit var myPreference: MyPreference
@@ -62,15 +63,16 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
 
 
     private fun initView() {
-        if (this.printing != null) {
-            this.printing!!.printingCallback = this
-
-            btn_PairUnPair.setOnClickListener {
+        if (printing != null) {
+            printing!!.printingCallback = this
+        }
+        btn_PairUnPair.setOnClickListener {
                 if (Printooth.hasPairedPrinter()) {
                     Printooth.removeCurrentPrinter()
-                } else {
+                }
+                else {
                     startActivityForResult(
-                        Intent(this@MainActivity, ScanningActivity::class.java),
+                        Intent(this, ScanningActivity::class.java),
                         ScanningActivity.SCANNING_FOR_PRINTER
                     )
                     changePairAndUnpair()
@@ -83,21 +85,22 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
                         Intent(this@MainActivity, ScanningActivity::class.java),
                         ScanningActivity.SCANNING_FOR_PRINTER
                     )
-                } else {
+                }
+                 else {
                     printImage()
                 }
             }
 
             nombre.setOnClickListener {
-                if (!Printooth.hasPairedPrinter()) {
+                if (!Printooth.hasPairedPrinter()){
                     startActivityForResult(
                         Intent(this@MainActivity, ScanningActivity::class.java),
                         ScanningActivity.SCANNING_FOR_PRINTER
-                    )
-                } else {
+                    )}
+                else {
                     printText()
                 }
-            }
+
         }
     }
 
@@ -106,7 +109,8 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
     private fun changePairAndUnpair() {
         if (Printooth.hasPairedPrinter()) {
             btn_PairUnPair.text = "Unpair  ${Printooth.getPairedPrinter()!!.name}"
-        } else {
+        }
+         else {
             btn_PairUnPair.text = "Pair with printer"
         }
     }
@@ -172,14 +176,14 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
         val printables = ArrayList<Printable>()
 
             //load Bitmap from internet
-        Picasso.get().load("https://image.flaticon.com/icons/png/512/38/38002.png")
+        Picasso.get().load("https://icon-library.com/images/facebook-icon-50x50/facebook-icon-50x50-25.jpg")
             .into(object : Target {
                 override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
 
                 }
 
                 override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-                    TODO("Not yet implemented")
+                    Toast.makeText(this@MainActivity,"failed",Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
@@ -194,20 +198,19 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode ==  ScanningActivity.SCANNING_FOR_PRINTER && resultCode == Activity.RESULT_OK){
+        if(requestCode ==  ScanningActivity.SCANNING_FOR_PRINTER && resultCode == Activity.RESULT_OK) {
             initPrinting();
             changePairAndUnpair()
         }
     }
 
     private fun initPrinting() {
-        if(Printooth.hasPairedPrinter()){
-            printing =  Printooth.printer()
+        if(Printooth.hasPairedPrinter()) {
+            printing = Printooth.printer()
         }
-        if(printing != null){
+        if(printing != null) {
             printing!!.printingCallback = this
-
+        }
         }
 
     }
-}

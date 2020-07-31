@@ -7,7 +7,7 @@ class ApplicationClass : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Printooth.init(this)
+        Printooth.init(this);
 
     }
 
