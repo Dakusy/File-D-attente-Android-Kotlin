@@ -24,10 +24,10 @@ class Ordonnance : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun picture_ordonnance(v: View?) {
+   /* fun picture_ordonnance(v: View?) {
         //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
         val intent = Intent(this, Picture_Ordonnance::class.java)
         //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
         startActivity(intent)
-    }
+    }*/
 }

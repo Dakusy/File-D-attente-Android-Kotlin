@@ -9,13 +9,13 @@ import android.widget.Toast
 
 
 /**
- * Created by VickY on 2017-11-28.
+ * Created by JessyC on 2020-07-20.
  */
 
 val DATABASE_NAME ="MyDB"
 val TABLE_NAME="Users"
 val COL_NAME = "name"
-val COL_ID = "id_table"
+val COL_ID = "id"
 
 class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAME,null,1){
     override fun onCreate(db: SQLiteDatabase?) {

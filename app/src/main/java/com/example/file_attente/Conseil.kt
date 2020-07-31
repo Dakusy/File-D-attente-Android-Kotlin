@@ -23,4 +23,9 @@ class Conseil : AppCompatActivity() {
         //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
         startActivity(intent)
     }
+
+    fun picture_conseil(v: View){
+        val intent = Intent(this, Picture_Conseil::class.java)
+        startActivity(intent)
+    }
 }
