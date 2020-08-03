@@ -20,7 +20,7 @@
         android:id="@+id/button2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btn_PairUnPair"
+        android:layout_above="@id/Language"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="5dp"
@@ -33,7 +33,7 @@
         android:id="@+id/button1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btn_PairUnPair"
+        android:layout_above="@id/Language"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="100dp"
@@ -42,37 +42,12 @@
         android:textColor="@color/colorAccent"
         android:textSize="30sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_PairUnPair"
-        android:layout_margin="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="PAIR" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/images"
-        android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/btn_PairUnPair"
-        android:layout_height="wrap_content"
-        android:text="IMAGES" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/nombre"
-        android:layout_width="wrap_content"
-        android:layout_below="@id/images"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content"
-        android:text="NOMBRE" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/nombre"
         android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
         android:clickable="true"
         android:onClick="lang"
         app:srcCompat="@android:drawable/ic_menu_myplaces" />

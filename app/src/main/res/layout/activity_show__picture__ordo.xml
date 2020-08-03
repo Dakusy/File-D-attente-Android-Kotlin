@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_PairUnPair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Show_Number"
+        android:layout_centerInParent="true"
+        android:text="LINK IMPRIMANTE" />
+
+    <Button
+        android:id="@+id/btn_Retour"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn_PairUnPair"
+        android:layout_centerInParent="true"
+        android:text="IMPRIMER" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:src="@drawable/ic_baseline_image_24"
+        android:layout_centerHorizontal="true"
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
+
+
+    <TextView
+        android:id="@+id/Show_Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_centerHorizontal="true"
+        android:textColor="#2196F3"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_below="@id/btn_Retour"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+</RelativeLayout>

@@ -7,6 +7,6 @@ val PERMISSION_CODE = 1000;
 val IMAGE_CAPTURE_CODE = 1001
 var image_uri: Uri? = null
 
-class NumberHelper{
+class NumberHelper(val id : String, val name : String, val number : Int)
 
-}
+

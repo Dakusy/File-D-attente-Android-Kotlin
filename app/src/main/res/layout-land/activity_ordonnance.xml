@@ -14,21 +14,20 @@
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Ordo_picture"
         android:layout_width="600dp"
         android:layout_height="230dp"
         android:layout_centerInParent="true"
         android:layout_marginBottom="20dp"
-        android:onClick="picture_ordonnance"
         android:text="@string/j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente"
         android:textColor="@color/colorAccent"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/Ordo_Nom"
         android:layout_width="600dp"
         android:layout_height="230dp"
-        android:layout_below="@id/button4"
+        android:layout_below="@id/Ordo_picture"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:onClick="nom_ordonnance"
@@ -52,7 +51,7 @@
         android:text="@string/page_ordonnance"
         android:layout_marginBottom="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_above="@id/button4"
+        android:layout_above="@id/Ordo_picture"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp" />

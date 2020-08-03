@@ -17,10 +17,9 @@
         android:id="@+id/Btn_Retour"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_below="@id/Show_Number"
+        android:layout_below="@id/btn_PairUnPair"
         android:layout_centerInParent="true"
-        android:onClick="main"
-        android:text="@string/fin" />
+        android:text="IMPRIMER" />
 
     <TextView
         android:id="@+id/Show_Number"
@@ -31,5 +30,13 @@
         android:textColor="#2196F3"
         android:textSize="36sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_PairUnPair"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/Show_Number"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:text="LINK IMPRIMANTE" />
 
 </RelativeLayout>

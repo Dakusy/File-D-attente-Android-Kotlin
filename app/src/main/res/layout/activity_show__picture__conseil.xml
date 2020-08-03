@@ -2,20 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btn_PairUnPair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Show_Number"
+        android:layout_centerInParent="true"
+        android:text="LINK IMPRIMANTE" />
+
+    <Button
+        android:id="@+id/btn_Retour"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn_PairUnPair"
+        android:layout_centerInParent="true"
+        android:text="IMPRIMER" />
+
     <ImageView
         android:id="@+id/image_view"
         android:src="@drawable/ic_baseline_image_24"
         android:layout_centerHorizontal="true"
         android:layout_width="400dp"
         android:layout_height="400dp" />
-
-    <Button
-        android:id="@+id/Btn_Retour"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/Show_Number"
-        android:layout_centerInParent="true"
-        android:text="@string/fin" />
 
 
     <TextView
