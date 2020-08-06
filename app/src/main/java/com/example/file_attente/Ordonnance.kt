@@ -1,11 +1,11 @@
 package com.example.file_attente
 
 import android.Manifest
-import android.R.attr
 import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -14,6 +14,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_ordonnance.*
+import java.io.ByteArrayOutputStream
 
 
 class Ordonnance : AppCompatActivity() {
@@ -97,13 +98,27 @@ class Ordonnance : AppCompatActivity() {
      override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         //called when image was captured from camera intent
-        if (resultCode == Activity.RESULT_OK){
-            val intent = Intent(this, Show_Picture_Ordo::class.java)
+        if (resultCode == Activity.RESULT_OK) {
+            val bitmap = MediaStore.Images.Media.getBitmap(
+                this.contentResolver,
+                Uri.parse(image_uri.toString())
+            )
             Number += 1
+            val byteArrayOutputStream = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.PNG, 70, byteArrayOutputStream)
+            val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
+
+           /* val image: String = Base64.encodeToString(byteArray, Base64.DEFAULT)*/
+            val ref = database.getReference("Queue D")
+            val ClientID = ref.push().key
+            val Client = Client_Image(id = ClientID!!, Image = bitmap, number = Number)
+            ref.child(ClientID).setValue(Client).addOnCompleteListener {
+                Toast.makeText(this,"Push in Database Successful",Toast.LENGTH_LONG).show()
+            }
+
+            val intent = Intent(this, Show_Picture_Ordo::class.java)
             intent.putExtra("Number", Number)
             startActivity(intent)
-
+        }
         }
     }
-
-}

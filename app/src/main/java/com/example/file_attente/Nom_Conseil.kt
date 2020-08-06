@@ -24,10 +24,9 @@ class Nom_Conseil : AppCompatActivity() {
                 val nom = Name_Ordo.text.toString()
                 Number += 1
 
-                val database = FirebaseDatabase.getInstance()
                 val ref = database.getReference("Queue A")
                 val ClientID = ref.push().key
-                val Client = NumberHelper(id = ClientID!!,name = nom, number = Number)
+                val Client = Client(id = ClientID!!,name = nom, number = Number)
                 ref.child(ClientID).setValue(Client).addOnCompleteListener {
                     Toast.makeText(this,"Push in Database Successful",Toast.LENGTH_LONG).show()
                 }
@@ -43,21 +42,6 @@ class Nom_Conseil : AppCompatActivity() {
 
         }
     }
-
-
-
-
-
-       /* submit.setOnClickListener {
-            if (Name.text.toString().isNotEmpty()) {
-                var user = User(Name.text.toString())
-                db.insertData(user)
-            } else {
-                Toast.makeText(context,"Please Fill All Data's",Toast.LENGTH_SHORT).show()
-            }
-
-        }*/
-
 
     public fun Back(v: View?) {
         //pour retourner a l’activite principale il suffit seulement d’appler la methode finish() qui vas tuer cette activite

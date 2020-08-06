@@ -125,7 +125,7 @@ class Show_Conseil_Nom : AppCompatActivity(), PrintingCallback {
                     .setAlignment(DefaultPrinter.ALIGNMENT_CENTER)
                     .setFontSize(DefaultPrinter.FONT_SIZE_LARGE)
                     .setEmphasizedMode(DefaultPrinter.EMPHASIZED_MODE_BOLD)
-                    .setNewLinesAfter(3)
+                    .setNewLinesAfter(2)
                     .build()
             )
 

@@ -17,22 +17,24 @@
         android:id="@+id/Ordo_picture"
         android:layout_width="600dp"
         android:layout_height="230dp"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="#A5ACA5"
         android:text="@string/j_accepte_que_mon_image_soit_utilis_temporairement_et_associ_mon_num_ro_dans_la_file_d_attente"
-        android:textColor="@color/colorAccent"
+        android:textColor="#000000"
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/Ordo_Nom"
         android:layout_width="600dp"
         android:layout_height="230dp"
-        android:layout_below="@id/Ordo_picture"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="#A5ACA5"
         android:onClick="nom_ordonnance"
         android:text="@string/je_ne_souhaite_pas_que_mon_image_soit_utilis_je_pr_f_re_saisir_un_pseudo_ou_mon_nom"
-        android:textColor="@color/colorAccent"
+        android:textColor="#000000"
         android:textSize="30sp" />
 
     <TextView
@@ -43,17 +45,5 @@
         android:text="@string/red_marrer"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/page_ordonnance"
-        android:layout_marginBottom="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/Ordo_picture"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp" />
 
 </RelativeLayout>

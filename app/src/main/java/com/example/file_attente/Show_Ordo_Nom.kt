@@ -75,9 +75,8 @@ class Show_Ordo_Nom : AppCompatActivity(), PrintingCallback {
             } else {
                 printText()
                 Thread.sleep(5_000)
-                //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
                 val intent = Intent(this, MainActivity::class.java)
-                //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
+                //Retour au départ
                 startActivity(intent)
             }
 
@@ -125,7 +124,7 @@ class Show_Ordo_Nom : AppCompatActivity(), PrintingCallback {
                 .setAlignment(DefaultPrinter.ALIGNMENT_CENTER)
                 .setFontSize(DefaultPrinter.FONT_SIZE_LARGE)
                 .setEmphasizedMode(DefaultPrinter.EMPHASIZED_MODE_BOLD)
-                .setNewLinesAfter(3)
+                .setNewLinesAfter(1)
                 .build()
         )
 

@@ -22,10 +22,7 @@
         tools:replace="android:theme">
         <activity android:name=".Show_Picture_Ordo"></activity>
         <activity android:name=".languages.Settings" />
-        <activity android:name=".Login" />
-        <activity android:name=".Guest" />
         <activity android:name=".Show_Picture_Conseil" />
-        <activity android:name=".Picture_Conseil" />
         <activity android:name=".Show_Ordo_Nom" />
         <activity android:name=".Show_Conseil_Nom" />
         <activity android:name=".Nom_Ordonnance" />
