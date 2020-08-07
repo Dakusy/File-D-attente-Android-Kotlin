@@ -1,17 +1,17 @@
 package com.example.file_attente
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_nom__ordonnance.*
 
 
 class Nom_Ordonnance : AppCompatActivity() {
 
     val context = this
-    var db = DataBaseHandler(context)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,13 +20,17 @@ class Nom_Ordonnance : AppCompatActivity() {
 
         submit_Ordo.setOnClickListener {
             if (Name_Ordo.text.toString().isNotEmpty()) {
-                var user = User(Name_Ordo.text.toString())
-                db.insertData(user)
-                val name = Name_Ordo.text.toString()
+                val nom = Name_Ordo.text.toString()
                 Number += 1
-                //intent to start activity
-                val intent = Intent(this@Nom_Ordonnance, Show_Conseil_Nom::class.java)
-                intent.putExtra("Name", name)
+                val ref = database.getReference("Queue B")
+                val ClientID = ref.push().key
+                val Client = Client(id = ClientID!!,name = nom, number = Number)
+                ref.child(ClientID).setValue(Client).addOnCompleteListener {
+                    Toast.makeText(this,"Push in Database Successful",Toast.LENGTH_LONG).show()
+                }
+
+                val intent = Intent(this@Nom_Ordonnance, Show_Ordo_Nom::class.java)
+                intent.putExtra("Name", nom)
                 intent.putExtra("Number", Number)
                 startActivity(intent)
             } else {
@@ -35,7 +39,7 @@ class Nom_Ordonnance : AppCompatActivity() {
 
         }
     }
-        public fun Back(v: View?) {
+    public fun Back(v: View?) {
             //pour retourner a l’activite principale il suffit seulement d’appler la methode finish() qui vas tuer cette activite
 
             finish();
