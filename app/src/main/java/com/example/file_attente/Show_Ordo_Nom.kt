@@ -19,8 +19,6 @@ import com.mazenrashed.printooth.data.printer.DefaultPrinter
 import com.mazenrashed.printooth.ui.ScanningActivity
 import com.mazenrashed.printooth.utilities.Printing
 import com.mazenrashed.printooth.utilities.PrintingCallback
-import com.squareup.picasso.Picasso
-import com.squareup.picasso.Target
 import kotlinx.android.synthetic.main.activity_show__ordo__nom.*
 import java.lang.Exception
 
@@ -132,30 +130,6 @@ class Show_Ordo_Nom : AppCompatActivity(), PrintingCallback {
 
     }
 
-    private fun printImage() {
-        val printables = ArrayList<Printable>()
-
-        //load Bitmap from internet
-        Picasso.get()
-            .load("https://icon-library.com/images/facebook-icon-50x50/facebook-icon-50x50-25.jpg")
-            .into(object : Target {
-                override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
-
-                }
-
-                override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-                    Toast.makeText(this@Show_Ordo_Nom, "failed", Toast.LENGTH_SHORT).show()
-                }
-
-                override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-                    printables.add(ImagePrintable.Builder(bitmap!!).build())
-                    printing!!.print(printables)
-                }
-
-            })
-
-
-    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

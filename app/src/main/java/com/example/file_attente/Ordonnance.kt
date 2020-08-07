@@ -13,6 +13,7 @@ import android.provider.MediaStore
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_ordonnance.*
 import java.io.ByteArrayOutputStream
 
@@ -23,15 +24,15 @@ class Ordonnance : AppCompatActivity() {
         setContentView(R.layout.activity_ordonnance)
 
         Ordo_picture.setOnClickListener {
-            //if system os is Marshmallow or Above, we need to request runtime permission
+            //Permet de vérifier sur l'application est utilisé sur un système Android inférieur ou supérieur à Marshmallow
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                 if (checkSelfPermission(Manifest.permission.CAMERA)
                     == PackageManager.PERMISSION_DENIED ||
                     checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_DENIED){
-                    //permission was not enabled
+                    //les permissions n'étaient pas accepter
                     val permission = arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    //show popup to request permission
+                    //demande des permissions
                     requestPermissions(permission, PERMISSION_CODE)
                 }
                 else{
@@ -39,32 +40,24 @@ class Ordonnance : AppCompatActivity() {
                 }
             }
             else{
-                //system os is < marshmallow
+                //Si le système inférieur à marshmallow pas besoin de vérification des permissions
                 openCamera()
             }
         }
     }
 
+    //fonction utilisé sur un bouton permettant le retour en arrière et la fin de la tâche en cours si erreur du client
     public fun Back(v: View?) {
-        //pour retourner a l’activite principale il suffit seulement d’appler la methode finish() qui vas tuer cette activite
-
         finish();
     }
 
+    //Redirection vers l'activité Nom_Ordonnance qui est utilisé si la RGPD n'est pas validé
     fun nom_ordonnance(v: View?) {
-        //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
         val intent = Intent(this, Nom_Ordonnance::class.java)
-        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
         startActivity(intent)
     }
 
-   /* fun picture_ordonnance(v: View?) {
-        //on creer une nouvelle intent on definit la class de depart ici this et la class d'arrivé ici SecondActivite
-        val intent = Intent(this, Picture_Ordonnance::class.java)
-        //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici Ordonnance
-        startActivity(intent)
-    }*/
-
+    //Fonction permettant l'activation de la camera pour prendre la photo et l'enregistre en URI
     private fun openCamera() {
         val values = ContentValues()
         values.put(MediaStore.Images.Media.TITLE, "New Picture")
@@ -77,24 +70,27 @@ class Ordonnance : AppCompatActivity() {
 
     }
 
-
+    //Fonction permettant de vérifier si les permissions requises pour la Camera on été accepter ou pas
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        //called when user presses ALLOW or DENY from Permission Request Popup
+        //Fonction appeler quand une personne accepte ou refuse des permissions
         when(requestCode){
             PERMISSION_CODE -> {
                 if (grantResults.size > 0 && grantResults[0] ==
                     PackageManager.PERMISSION_GRANTED){
-                    //permission from popup was granted
+                    //permission accepter
                     openCamera()
                 }
                 else{
-                    //permission from popup was denied
+                    //si permission refusé
                     Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
                 }
             }
         }
     }
 
+
+    //Après prise de la photo vérifie si tout est bon alors execute le code dans le If qui permet de compresser l'image en bitmap
+    //et d'enregistrer les données sur FireBase puis effectue une redirection sur Show_Picture_Ordo pour imprimer.
      override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         //called when image was captured from camera intent

@@ -7,6 +7,7 @@ class ApplicationClass : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        //Permet d'initialiser Printooth, notre librairie pour l'imprimante Bluetooth.
         Printooth.init(this);
 
     }

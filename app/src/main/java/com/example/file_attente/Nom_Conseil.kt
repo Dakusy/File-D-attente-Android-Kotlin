@@ -23,7 +23,6 @@ class Nom_Conseil : AppCompatActivity() {
             if (Name_Ordo.text.toString().isNotEmpty()) {
                 val nom = Name_Ordo.text.toString()
                 Number += 1
-
                 val ref = database.getReference("Queue A")
                 val ClientID = ref.push().key
                 val Client = Client(id = ClientID!!,name = nom, number = Number)
